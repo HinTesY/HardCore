@@ -1,0 +1,24 @@
+name: My Local Architect
+version: 1.0.0
+schema: v1
+
+models:
+  - name: Qwen 7B (Fast)
+    provider: ollama
+    model: qwen2.5-coder:7b
+  - name: Qwen 14B (Smart)
+    provider: ollama
+    model: qwen2.5-coder:14b
+
+# Настройка автодополнения (Tab), чтобы он подсказывал код на лету
+tabAutocompleteModel:
+  name: Autocomplete
+  provider: ollama
+  model: qwen2.5-coder:7b
+
+# Настройка контекста (чтобы он не индексировал весь мусор проекта)
+contextProviders:
+  - name: file
+  - name: code
+  - name: diff
+  - name: terminal

@@ -7,6 +7,7 @@ using static InputPlayer;
 public class InputReader : ScriptableObject, IMovementInputActions
 {
     public Vector2 MoveDirection { get; private set; }
+    public Vector2 MousePosition => Mouse.current.position.ReadValue();
     private InputPlayer _gameInput;
     public bool IsShooting { get; private set; }
 

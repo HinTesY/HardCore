@@ -1,0 +1,11 @@
+**/Library/**
+**/Temp/**
+**/Obj/**
+**/Logs/**
+**/ProjectSettings/**
+**/UserSettings/**
+**/Packages/**
+**/*.meta
+**/*.unity
+**/*.prefab
+**/*.asset

@@ -2,8 +2,12 @@ using UnityEngine;
 
 public class ObjectDestroyer : MonoBehaviour
 {
-    [SerializeField] private Health _health;
+    private Health _health;
 
+    void Awake()
+    {
+        if (_health == null) _health = GetComponent<Health>();
+    }
     private void OnEnable()
     {
         _health.OnDeath += HandleDeath;
